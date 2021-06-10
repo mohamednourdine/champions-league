@@ -11,7 +11,7 @@
     font-weight: 300;
 }
 body {
-    background: url(../img/bg.jpg);
+    background: url(../img/background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -263,6 +263,7 @@ html{
         white-space: nowrap;
         font-size: 11px;
     }
+
     #normal-weeks {
         display: none;
     }
@@ -289,4 +290,11 @@ html{
         background-color: #1df1fd !important;
     }
 
+
+}
+
+.simulate-all-weeks{
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 5px;
 }
