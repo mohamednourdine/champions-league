@@ -10,9 +10,82 @@
                     <div class="bg-title p-3 animate__animated animate__bounceInLeft">
                         <h1 class="h4 my-auto text-darkblue font-fredoka">Champions League Simulation</h1>
                     </div>
+
+
+                    <div class="row standings-box">
+                        <div class="col-md-12">
+                            <div
+                                class="bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-1s">
+                                <h2 class="h5 my-auto text-blue font-rowdies">Standing Results</h2>
+                            </div>
+                            <div class="table-responsive animate__animated animate__flipInX animate__delay-1s">
+                                <table id="standings-table" class="table table-bordred table-striped">
+                                    <thead>
+                                        <th>Teams</th>
+                                        <th>P</th>
+                                        <th>W</th>
+                                        <th>D</th>
+                                        <th>L</th>
+                                        <th>GD</th>
+                                        <th>PTS</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                LIVERPOOL
+                                            </td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                LIVERPOOL
+                                            </td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                LIVERPOOL
+                                            </td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                LIVERPOOL
+                                            </td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div
-                        class="bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-1s">
-                        <h2 class="h5 my-auto text-blue font-rowdies">GAME FIXTURES</h2>
+                        class="bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-2s">
+                        <h2 class="h5 my-auto text-blue font-rowdies">Game Fixtures</h2>
                     </div>
                 </div>
                 <!-- WEEKS / SMALL DEVICE -->
@@ -296,6 +369,36 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1 bg-fixture text-light rounded pb-4">
+            <hr>
+            <div class="header">
+             Application Description:
+            </div>
+            <div class="desc">
+                <ul>
+                    <li>You can simulate all the games by clicking the Simulate All Weeks button on the right or click on each weeks buttons to simulate the game progressively</li>
+                    <li>Click on the Reset button to reset all the system counts and start back</li>
+                    <li>
+                        A four team champions League Application built base on the Premier Leage Rules ie: Other rules in the league (scoring, points, goal difference, etc.) will be the same as
+                        the rules of the Premier League
+                    </li>
+                    <li>
+                        Check this link for <a href="http://www.premierleague.com/en-gb/matchday/league-table.html" target="_blank">more details</a>
+                    </li>
+                    <li>
+                        Each screen on the Standing Results table of the subsequent week will represent the
+                         table and after every's week match, the table match statuses are updated. Moving forward, both the point scores and
+                         the results of the matches will be represented by this screen
+                    </li>
+                    <li>The Project needs to be completed using PHP Laravel and VueJS</li>
+                    <li>The code implementation follows all the best practices of OOP.</li>
+                    <li>The code of this application can be found <a href="https://github.com/mohamednourdine/champions-league" target="_blank">Here</a></li>
+                </ul>
+            </div>
+          </div>
     </div>
 </div>
 @endsection

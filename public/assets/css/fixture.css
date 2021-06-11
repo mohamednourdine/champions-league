@@ -298,3 +298,14 @@ html{
     width: 100%;
     padding-bottom: 5px;
 }
+
+.text-white{
+    color: white;
+}
+.table{
+    color: white;
+    margin: 25px 0;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    color: white;
+}
