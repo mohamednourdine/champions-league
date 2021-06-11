@@ -15,7 +15,7 @@ class CreateStandingsTable extends Migration
     {
         Schema::create('standings', function (Blueprint $table) {
             $table->id();
-            $table->integer('team_id');
+            $table->unsignedBigInteger('team_id');
             $table->integer('won')->default(0);
             $table->integer('drawn')->default(0);
             $table->integer('lose')->default(0);
