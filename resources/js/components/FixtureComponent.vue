@@ -352,12 +352,13 @@
 
                         <div id="weeks-col">
                             <div class="weeks">
-                                <div class="week week-active">1. Week Play</div>
-                                <div class="week">2. Week Play</div>
-                                <div class="week">3. Week Play</div>
-                                <div class="week">4. Week Play</div>
+                               <div  v-for="(item, index) in JSON.parse(weeks)" :key="item.id" class="week" :class="{ 'week-active' : index === 0  }">
+                                    {{ item.title }}
+                                </div>
                             </div>
                         </div>
+
+
 
                     </div>
                 </div>
@@ -372,14 +373,15 @@ export default {
   components: {},
 
   props: {
-    skillid: null,
+    weeks: null,
     testid: null,
   },
   data() {
     return {
       question: null,
       info: null,
-      answer: null
+      answer: null,
+      weeks: null
     };
   },
 

@@ -4,8 +4,7 @@
 
 <div class="container">
 
-
-    <fixture-component/>
+    <fixture-component weeks="{{ $weeks }}"/>
 
     <div class="row">
         <div class="col-md-10 offset-md-1 bg-fixture text-light rounded pb-4">

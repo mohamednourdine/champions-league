@@ -17,4 +17,9 @@ class Standing extends Model
         'goal_drawn',
         'points'
     ];
+
+    public function team()
+    {
+        return $this->belongsTo('App\Models\Team');
+    }
 }

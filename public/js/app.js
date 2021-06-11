@@ -2214,17 +2214,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {},
   props: {
-    skillid: null,
+    weeks: null,
     testid: null
   },
   data: function data() {
     return {
       question: null,
       info: null,
-      answer: null
+      answer: null,
+      weeks: null
     };
   },
   methods: {
@@ -37801,927 +37803,470 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "row" }, [
+    _c(
+      "div",
+      { staticClass: "col-md-10 mx-auto bg-fixture text-light rounded pb-4" },
+      [
+        _c("div", { attrs: { id: "fixture-main" } }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mt-3" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-2", attrs: { id: "normal-weeks" } },
+              [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "weeks-title" }, [
+                  _vm._v("SIMULATE WEEKS GAMES")
+                ]),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _c("div", { attrs: { id: "weeks-col" } }, [
+                  _c(
+                    "div",
+                    { staticClass: "weeks" },
+                    _vm._l(JSON.parse(_vm.weeks), function(item, index) {
+                      return _c(
+                        "div",
+                        {
+                          key: item.id,
+                          staticClass: "week",
+                          class: { "week-active": index === 0 }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                " +
+                              _vm._s(item.title) +
+                              "\n                            "
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { attrs: { id: "header" } }, [
       _c(
         "div",
-        { staticClass: "col-md-10 mx-auto bg-fixture text-light rounded pb-4" },
+        { staticClass: "bg-title p-3 animate__animated animate__bounceInLeft" },
         [
-          _c("div", { attrs: { id: "fixture-main" } }, [
-            _c("div", { attrs: { id: "header" } }, [
+          _c("h1", { staticClass: "h4 my-auto text-darkblue font-fredoka" }, [
+            _vm._v("Champions League Simulation")
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "row standings-box" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-1s"
+            },
+            [
+              _c("h2", { staticClass: "h5 my-auto text-blue font-rowdies" }, [
+                _vm._v("Standing Results")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "table-responsive animate__animated animate__flipInX animate__delay-1s"
+            },
+            [
               _c(
-                "div",
+                "table",
                 {
-                  staticClass:
-                    "bg-title p-3 animate__animated animate__bounceInLeft"
+                  staticClass: "table table-bordred table-striped",
+                  attrs: { id: "standings-table" }
                 },
                 [
+                  _c("thead", [
+                    _c("th", [_vm._v("Teams")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("P")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("W")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("D")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("L")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("GD")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("PTS")])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", [
+                        _vm._v(
+                          "\n                                            LIVERPOOL\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [
+                        _vm._v(
+                          "\n                                            LIVERPOOL\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [
+                        _vm._v(
+                          "\n                                            LIVERPOOL\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [
+                        _vm._v(
+                          "\n                                            LIVERPOOL\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("0")])
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "clearfix" })
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-2s"
+        },
+        [
+          _c("h2", { staticClass: "h5 my-auto text-blue font-rowdies" }, [
+            _vm._v("Game Fixtures")
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "mobile-weeks" } }, [
+      _c("div", { staticClass: "d-flex" }, [
+        _c("div", { staticClass: "dropdown ms-auto" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-sm btn-lightblue dropdown-toggle",
+              attrs: {
+                href: "#",
+                role: "button",
+                id: "dropdownMenuLink",
+                "data-bs-toggle": "dropdown",
+                "aria-expanded": "false"
+              }
+            },
+            [
+              _vm._v(
+                "\n                            WEEKS\n                        "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass: "dropdown-menu dropdown-menu-dark weeks-dropdown",
+              attrs: { "aria-labelledby": "dropdownMenuLink" }
+            },
+            [
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item active", attrs: { href: "#" } },
+                  [_vm._v("1")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v("2")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v("3")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v("4")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v("5")]
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "col-md-10", attrs: { id: "fixtures-col" } },
+      [
+        _c(
+          "div",
+          { staticClass: "accordion", attrs: { id: "fixtureaccordion" } },
+          [
+            _c("div", { staticClass: "daytitle" }, [
+              _vm._v("1st Week Matches")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "accordion-item mb-2" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading1" } },
+                [
                   _c(
-                    "h1",
-                    { staticClass: "h4 my-auto text-darkblue font-fredoka" },
-                    [_vm._v("Champions League Simulation")]
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-accordion-finished collapsed font-rowdies w-100",
+                      attrs: {
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse1",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse1"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("LIVERPOOL")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("1 - 1")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [_vm._v("ARSENAL")])
+                      ])
+                    ]
                   )
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "row standings-box" }, [
-                _c("div", { staticClass: "col-md-12" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-1s"
-                    },
-                    [
-                      _c(
-                        "h2",
-                        { staticClass: "h5 my-auto text-blue font-rowdies" },
-                        [_vm._v("Standing Results")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "table-responsive animate__animated animate__flipInX animate__delay-1s"
-                    },
-                    [
-                      _c(
-                        "table",
-                        {
-                          staticClass: "table table-bordred table-striped",
-                          attrs: { id: "standings-table" }
-                        },
-                        [
-                          _c("thead", [
-                            _c("th", [_vm._v("Teams")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("P")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("W")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("D")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("L")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("GD")]),
-                            _vm._v(" "),
-                            _c("th", [_vm._v("PTS")])
-                          ]),
-                          _vm._v(" "),
-                          _c("tbody", [
-                            _c("tr", [
-                              _c("td", [
-                                _vm._v(
-                                  "\n                                            LIVERPOOL\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")])
-                            ]),
-                            _vm._v(" "),
-                            _c("tr", [
-                              _c("td", [
-                                _vm._v(
-                                  "\n                                            LIVERPOOL\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")])
-                            ]),
-                            _vm._v(" "),
-                            _c("tr", [
-                              _c("td", [
-                                _vm._v(
-                                  "\n                                            LIVERPOOL\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")])
-                            ]),
-                            _vm._v(" "),
-                            _c("tr", [
-                              _c("td", [
-                                _vm._v(
-                                  "\n                                            LIVERPOOL\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v("0")])
-                            ])
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "clearfix" })
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
               _c(
                 "div",
                 {
-                  staticClass:
-                    "bg-description w-auto p-3 py-2 animate__animated animate__flipInX animate__delay-2s"
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse1",
+                    "aria-labelledby": "heading1",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
                 },
                 [
-                  _c(
-                    "h2",
-                    { staticClass: "h5 my-auto text-blue font-rowdies" },
-                    [_vm._v("Game Fixtures")]
-                  )
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "badge bg-finished rounded-bottom" },
+                      [_c("small", [_vm._v("FULL TIME")])]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "fas fa-futbol" }),
+                          _vm._v(" 17'")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("Aubameyang")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("Ozan Kabak")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "yellow-card" }),
+                          _vm._v(
+                            " 24'\n                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("Mohamed Salah")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "fas fa-futbol" }),
+                          _vm._v(" 36'")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "red-card" }),
+                          _vm._v(
+                            " 67'\n                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("David Luiz")
+                        ])
+                      ])
+                    ])
+                  ])
                 ]
               )
             ]),
             _vm._v(" "),
-            _c("div", { attrs: { id: "mobile-weeks" } }, [
-              _c("div", { staticClass: "d-flex" }, [
-                _c("div", { staticClass: "dropdown ms-auto" }, [
+            _c("div", { staticClass: "accordion-item mb-2" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading2" } },
+                [
                   _c(
-                    "a",
+                    "button",
                     {
-                      staticClass: "btn btn-sm btn-lightblue dropdown-toggle",
+                      staticClass:
+                        "btn btn-accordion-live collapsed font-rowdies w-100",
                       attrs: {
-                        href: "#",
-                        role: "button",
-                        id: "dropdownMenuLink",
-                        "data-bs-toggle": "dropdown",
-                        "aria-expanded": "false"
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse2",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse2"
                       }
                     },
                     [
-                      _vm._v(
-                        "\n                            WEEKS\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    {
-                      staticClass:
-                        "dropdown-menu dropdown-menu-dark weeks-dropdown",
-                      attrs: { "aria-labelledby": "dropdownMenuLink" }
-                    },
-                    [
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item active",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("1")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("2")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("3")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("4")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: { href: "#" }
-                          },
-                          [_vm._v("5")]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row mt-3" }, [
-              _c(
-                "div",
-                { staticClass: "col-md-10", attrs: { id: "fixtures-col" } },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "accordion",
-                      attrs: { id: "fixtureaccordion" }
-                    },
-                    [
-                      _c("div", { staticClass: "daytitle" }, [
-                        _vm._v("1st Week Matches")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item mb-2" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading1" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion-finished collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse1",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse1"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("LIVERPOOL")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("1 - 1")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("ARSENAL")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("MAN. UNITED")
+                        ]),
                         _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse1",
-                              "aria-labelledby": "heading1",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "badge bg-finished rounded-bottom"
-                                },
-                                [_c("small", [_vm._v("FULL TIME")])]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-futbol"
-                                    }),
-                                    _vm._v(" 17'")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("Aubameyang")
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("Ozan Kabak")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", { staticClass: "yellow-card" }),
-                                    _vm._v(
-                                      " 24'\n                                            "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("Mohamed Salah")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-futbol"
-                                    }),
-                                    _vm._v(" 36'")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", { staticClass: "red-card" }),
-                                    _vm._v(
-                                      " 67'\n                                            "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("David Luiz")
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item mb-2" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading2" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion-live collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse2",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse2"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("MAN. UNITED")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("2 - 0")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("MAN. CITY")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("2 - 0")
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse2",
-                              "aria-labelledby": "heading2",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "badge rounded-bottom btn-accordion-live"
-                                },
-                                [_vm._v("LIVE 67'")]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("M. Rashford")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-futbol"
-                                    }),
-                                    _vm._v(" 14'")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", { staticClass: "yellow-card" }),
-                                    _vm._v(
-                                      " 26'\n                                            "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("De Bruyne")
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("M. Rashford")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-futbol"
-                                    }),
-                                    _vm._v(" 49'")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-exchange-alt"
-                                    }),
-                                    _vm._v(" 67'")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("span", {
-                                      staticClass: "fas fa-long-arrow-alt-down"
-                                    }),
-                                    _vm._v(
-                                      " De Bruyne\n                                                "
-                                    ),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    _c("span", {
-                                      staticClass: "fas fa-long-arrow-alt-up"
-                                    }),
-                                    _vm._v(
-                                      " R. Sterling\n                                            "
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "daytitle" }, [
-                        _vm._v("2nd Week Matches")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item mb-2" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading3" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse3",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse3"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("CHELSEA")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("16:00")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("TOTTENHAM")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse3",
-                              "aria-labelledby": "heading3",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-map-marker-alt"
-                                    }),
-                                    _vm._v(
-                                      " STAMFORD\n                                                B."
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-hand-paper"
-                                    }),
-                                    _vm._v(
-                                      " MIKE\n                                                DEAN"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-cloud-sun-rain"
-                                    }),
-                                    _vm._v(
-                                      " RAINY\n                                            "
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item mb-2" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading4" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse4",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse4"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("LEICESTER")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("17:45")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("EVERTON")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse4",
-                              "aria-labelledby": "heading4",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-map-marker-alt"
-                                    }),
-                                    _vm._v(
-                                      " KING\n                                                POWER ST."
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-hand-paper"
-                                    }),
-                                    _vm._v(
-                                      " LEE\n                                                MASON"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", { staticClass: "fas fa-cloud" }),
-                                    _vm._v(" CLOUDY")
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "daytitle" }, [
-                        _vm._v("3rd Week Matches")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading6" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse6",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse6"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("SOUTHAMPTON")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("18:30")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("SHEFFIELD UTD.")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse6",
-                              "aria-labelledby": "heading6",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-map-marker-alt"
-                                    }),
-                                    _vm._v(
-                                      " ST.\n                                                MARY'S"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-hand-paper"
-                                    }),
-                                    _vm._v(
-                                      " KEVIN\n                                                FRIEND"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", { staticClass: "fas fa-smog" }),
-                                    _vm._v(" FOGGY")
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "accordion-item mb-2" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticClass: "accordion-header",
-                            attrs: { id: "heading4" }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-accordion collapsed font-rowdies w-100",
-                                attrs: {
-                                  type: "button",
-                                  "data-bs-toggle": "collapse",
-                                  "data-bs-target": "#collapse4",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapse4"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("LEICESTER")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge border mx-2" },
-                                      [_vm._v("17:45")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _vm._v("EVERTON")
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "accordion-collapse collapse",
-                            attrs: {
-                              id: "collapse4",
-                              "aria-labelledby": "heading4",
-                              "data-bs-parent": "#fixtureaccordion"
-                            }
-                          },
-                          [
-                            _c("div", { staticClass: "accordion-body" }, [
-                              _c("div", { staticClass: "accordion-content" }, [
-                                _c("div", { staticClass: "row small" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-map-marker-alt"
-                                    }),
-                                    _vm._v(
-                                      " KING\n                                                POWER ST."
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-auto" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-hand-paper"
-                                    }),
-                                    _vm._v(
-                                      " LEE\n                                                MASON"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("i", { staticClass: "fas fa-cloud" }),
-                                    _vm._v(" CLOUDY")
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]
-                        )
+                        _c("div", { staticClass: "col" }, [_vm._v("MAN. CITY")])
                       ])
                     ]
                   )
@@ -38730,60 +38275,434 @@ var staticRenderFns = [
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "col-md-2", attrs: { id: "normal-weeks" } },
+                {
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse2",
+                    "aria-labelledby": "heading2",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
+                },
                 [
-                  _c("div", { staticClass: "weeks-nav text-center" }, [
+                  _c("div", { staticClass: "accordion-body" }, [
                     _c(
                       "span",
-                      { staticClass: "badge", attrs: { id: "weeksup" } },
-                      [_c("i", { staticClass: "fas fa-chevron-up" })]
+                      {
+                        staticClass: "badge rounded-bottom btn-accordion-live"
+                      },
+                      [_vm._v("LIVE 67'")]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      { staticClass: "badge", attrs: { id: "weeksdown" } },
-                      [_c("i", { staticClass: "fas fa-chevron-down" })]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "weeks-title" }, [
-                    _vm._v("SIMULATE WEEKS GAMES")
-                  ]),
-                  _vm._v(" "),
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("M. Rashford")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "fas fa-futbol" }),
+                          _vm._v(" 14'")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "yellow-card" }),
+                          _vm._v(
+                            " 26'\n                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [_vm._v("De Bruyne")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("M. Rashford")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "fas fa-futbol" }),
+                          _vm._v(" 49'")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "fas fa-exchange-alt" }),
+                          _vm._v(" 67'")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("span", {
+                            staticClass: "fas fa-long-arrow-alt-down"
+                          }),
+                          _vm._v(
+                            " De Bruyne\n                                                "
+                          ),
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass: "fas fa-long-arrow-alt-up"
+                          }),
+                          _vm._v(
+                            " R. Sterling\n                                            "
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "daytitle" }, [
+              _vm._v("2nd Week Matches")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "accordion-item mb-2" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading3" } },
+                [
                   _c(
                     "button",
-                    { staticClass: "btn btn-success simulate-all-weeks" },
+                    {
+                      staticClass:
+                        "btn btn-accordion collapsed font-rowdies w-100",
+                      attrs: {
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse3",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse3"
+                      }
+                    },
                     [
-                      _c("i", { staticClass: "fas fa-globe" }),
-                      _vm._v(" Simulate All Weeks\n                    ")
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [_vm._v("CHELSEA")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("16:00")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [_vm._v("TOTTENHAM")])
+                      ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { attrs: { id: "weeks-col" } }, [
-                    _c("div", { staticClass: "weeks" }, [
-                      _c("div", { staticClass: "week week-active" }, [
-                        _vm._v("1. Week Play")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "week" }, [
-                        _vm._v("2. Week Play")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "week" }, [
-                        _vm._v("3. Week Play")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "week" }, [
-                        _vm._v("4. Week Play")
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse3",
+                    "aria-labelledby": "heading3",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-map-marker-alt" }),
+                          _vm._v(
+                            " STAMFORD\n                                                B."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("i", { staticClass: "fas fa-hand-paper" }),
+                          _vm._v(
+                            " MIKE\n                                                DEAN"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-cloud-sun-rain" }),
+                          _vm._v(
+                            " RAINY\n                                            "
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "accordion-item mb-2" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading4" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-accordion collapsed font-rowdies w-100",
+                      attrs: {
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse4",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse4"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("LEICESTER")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("17:45")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [_vm._v("EVERTON")])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse4",
+                    "aria-labelledby": "heading4",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-map-marker-alt" }),
+                          _vm._v(
+                            " KING\n                                                POWER ST."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("i", { staticClass: "fas fa-hand-paper" }),
+                          _vm._v(
+                            " LEE\n                                                MASON"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-cloud" }),
+                          _vm._v(" CLOUDY")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "daytitle" }, [
+              _vm._v("3rd Week Matches")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "accordion-item" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading6" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-accordion collapsed font-rowdies w-100",
+                      attrs: {
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse6",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse6"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("SOUTHAMPTON")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("18:30")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("SHEFFIELD UTD.")
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse6",
+                    "aria-labelledby": "heading6",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-map-marker-alt" }),
+                          _vm._v(
+                            " ST.\n                                                MARY'S"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("i", { staticClass: "fas fa-hand-paper" }),
+                          _vm._v(
+                            " KEVIN\n                                                FRIEND"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-smog" }),
+                          _vm._v(" FOGGY")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "accordion-item mb-2" }, [
+              _c(
+                "h2",
+                { staticClass: "accordion-header", attrs: { id: "heading4" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-accordion collapsed font-rowdies w-100",
+                      attrs: {
+                        type: "button",
+                        "data-bs-toggle": "collapse",
+                        "data-bs-target": "#collapse4",
+                        "aria-expanded": "false",
+                        "aria-controls": "collapse4"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v("LEICESTER")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("span", { staticClass: "badge border mx-2" }, [
+                            _vm._v("17:45")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [_vm._v("EVERTON")])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-collapse collapse",
+                  attrs: {
+                    id: "collapse4",
+                    "aria-labelledby": "heading4",
+                    "data-bs-parent": "#fixtureaccordion"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c("div", { staticClass: "accordion-content" }, [
+                      _c("div", { staticClass: "row small" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-map-marker-alt" }),
+                          _vm._v(
+                            " KING\n                                                POWER ST."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-auto" }, [
+                          _c("i", { staticClass: "fas fa-hand-paper" }),
+                          _vm._v(
+                            " LEE\n                                                MASON"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _c("i", { staticClass: "fas fa-cloud" }),
+                          _vm._v(" CLOUDY")
+                        ])
                       ])
                     ])
                   ])
                 ]
               )
             ])
-          ])
-        ]
-      )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "weeks-nav text-center" }, [
+      _c("span", { staticClass: "badge", attrs: { id: "weeksup" } }, [
+        _c("i", { staticClass: "fas fa-chevron-up" })
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "badge", attrs: { id: "weeksdown" } }, [
+        _c("i", { staticClass: "fas fa-chevron-down" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-success simulate-all-weeks" }, [
+      _c("i", { staticClass: "fas fa-globe" }),
+      _vm._v(" Simulate All Weeks\n                    ")
     ])
   }
 ]
