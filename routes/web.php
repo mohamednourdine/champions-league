@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FixtureController;
+use App\Http\Controllers\SimulatorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +16,3 @@ use App\Http\Controllers\FixtureController;
 
 
 Route::get('/', [FixtureController::class, 'appStart']);
-

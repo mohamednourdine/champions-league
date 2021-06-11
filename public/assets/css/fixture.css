@@ -32,6 +32,7 @@ html{
     right: 15px;
     top: 15px;
 }
+
 .badge {
     border-radius: 0px;
 }
@@ -77,13 +78,13 @@ html{
     padding-bottom: 10px;
 }
 .week {
-    width: 75%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     background: linear-gradient(-45deg, transparent 10%, rgba(0, 0, 0, 0.2) 10%);
     color: rgba(255, 255, 255, 0.5);
     border-radius: 3px;
-    padding: 2px;
+    padding: 3px;
     cursor: pointer;
     margin-top: 6px;
 }
@@ -240,7 +241,13 @@ html{
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1300px) {
+    .btn{
+        font-size: 0.9rem;
+    }
+}
+    @media only screen and (max-width: 768px) {
 
     .bg-title {
         padding-right: 10px !important;
@@ -260,10 +267,12 @@ html{
         padding-top: 1.6rem;
     }
     .accordion-header .col, .accordion-content .col, .accordion-header .col-auto, .accordion-content .col-auto {
-        white-space: nowrap;
         font-size: 11px;
     }
 
+    .col-auto{
+        width: 15%;
+    }
     #normal-weeks {
         display: none;
     }
@@ -293,10 +302,15 @@ html{
 
 }
 
+.reset-all-weeks{
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+}
 .simulate-all-weeks{
     font-size: 12px;
     width: 100%;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .text-white{
