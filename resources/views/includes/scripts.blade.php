@@ -2,3 +2,4 @@
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 
 <script src="{{ asset('assets/js/fixture.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
