@@ -5,55 +5,41 @@
 ![alt text](https://github.com/mohamednourdine/champions-league/blob/main/public/screenshot.png?raw=true)
 
 
-## About Laravel
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Application Description:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* You can simulate all the games by clicking the Simulate All Weeks button on the right or click on each weeks buttons to simulate the game progressively
+* Click on the Reset button to reset all the system counts and start back
+* A four team champions League Application built base on the Premier Leage Rules ie: Other rules in the league (scoring, points, goal difference, etc.) will be the same as the rules of the Premier League
+Check this link for more details
+* Each screen on the Standing Results table of the subsequent week will represent the table and after every's week match, the table match statuses are updated. Moving forward, both the point scores and the results of the matches will be represented by this screen
+* The Project needs to be completed using PHP Laravel and VueJS
+* The code implementation follows all the best practices of OOP.
+* The code of this application can be found Here
+ 
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Configure
 
-## Learning Laravel
+Install PHP and JavaScript dependencies:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    git clone https://github.com/mohamednourdine/champions-league.git
+    cd champions-league
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Rename the .env.example file to .env, and fill it with your local info, then:
 
-## Laravel Sponsors
+Install PHP and JavaScript dependencies:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    composer install
+    npm install
 
-### Premium Partners
+Generate Laravel keys:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+    php artisan key:generate
 
-## Contributing
+Migrate and seed the database:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    php artisan migrate --seed
 
-## Code of Conduct
+Compile all the front-end stuff:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    npm run dev
